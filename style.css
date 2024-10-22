@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Classic serif font for a vintage feel */
+    background-color: #f3f1e6; /* Slightly off-white background for paper-like color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("galaxy.png");
+    background-size: cover; /* Ensure the texture covers the entire background */
+}
+
+.book {
+    width: 1200px; /* Width for double pages */
+    height: 855px; /* Height of the book */
+    background-color: transparent(255, 255, 255, 0.9); /* Slightly transparent white for pages */
+    border: 2px solid transparent; /* Dark brown border */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+    position: relative;
+    overflow: hidden; /* Ensures that the pages don't overflow */
+}
+
+.page {
+    padding: 30px; /* Increased padding for a more substantial feel */
+    position: absolute;
+    top: 0;
+    width: 50%; /* Each page takes up half the width of the book */
+    height: 100%;
+    background-color: transparent(255, 255, 255, 0.9); /* Slightly transparent white for pages */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1); /* Softer inset shadow for depth */
+    border-radius: 5px;
+    transition: opacity 0.5s ease; /* Transition effect for fading */
+    backface-visibility: hidden; /* Hides the back of the pages when turned */
+    color: #f8bc61; /* Dark text color for readability */
+}
+
+#page1 {
+    left: 0; /* First page on the left */
+}
+
+#page2 {
+    left: 0; /* Second page on the right */
+}
+
+#page3 {
+    left: 0; /* Third page on the left */
+}
+
+#page4 {
+    left: 0; /* Fourth page on the right */
+}
+
+#page5 {
+    left: 0; /* Fifth page on the left */
+}
+
+#page6 {
+    left: 0; /* Sixth page on the right */
+}
+
+#page7 {
+    left: 50%; /* Seventh page on the left */
+}
+
+#page8 {
+    left: 50%; /* Eighth page on the right */
+}
+
+#page9 {
+    left: 0; /* Ninth page on the left */
+}
+
+#page10 {
+    left: 50%; /* Tenth page on the right */
+}
+
+.hidden {
+    opacity: 0; /* Fades out the hidden pages */
+    pointer-events: none; /* Prevents interaction when hidden */
+}
+
+.flip {
+    animation: flip 0.5s forwards; /* Apply flip animation */
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(1000px) rotateY(90deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+}
+
+h2 {
+    font-family: 'Georgia', serif; /* Keep headers classic */
+    font-size: 30px; /* Larger header for better visibility */
+    text-align: center;
+    margin-bottom: 20px; /* Space below header */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+p {
+    font-size: 20px; /* Larger font size for better readability */
+    line-height: 1.6; /* Increased line height for comfort */
+    margin-bottom: 30px; /* Space below paragraphs */
+}
+
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for comfort */
+    margin-top: 10px; /* Space above */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    resize: none; /* Disable resizing */
+    font-size: 16px; /* Font size for readability */
+}
+
+.buttons {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: space-between; /* Space between the buttons */
+    margin-top: 20px; /* Space above buttons */
+}
+
+.arrow {
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: #7a5e47; /* Dark brown for buttons */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 24px; /* Increase font size for visibility */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s; /* Added transform for hover */
+}
+
+.arrow:hover {
+    background-color: #8f6b53; /* Lighter brown on hover */
+    transform: scale(1.1); /* Slightly enlarges button on hover */
+}

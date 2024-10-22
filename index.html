@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALAXY LOVE LETTER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="book">
+        <div class="page" id="page1">
+            <h2>GALAXY LOVE:3</h2>
+            <p>Welcome to GALAXY LOVE MADE BY YOUR BABY </p>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('next')">&gt;</button>
+            </div>
+        </div>
+        
+        <div class="page hidden" id="page2">
+            <h2>YOUR SO</h2>
+            <blockquote>
+                <p>"PRETTY JUST LIKE, GALAXY"</p>
+            </blockquote>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="turnPage('next')">&gt;</button>
+            </div>
+        </div>
+        
+        <div class="page hidden" id="page3">
+            <h2></h2>
+            <blockquote>
+                <p>“IN A GALAXY FULL OF STARS, YOUR LOVE SHINES THE BRIGHTESS."</p>
+            </blockquote>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="turnPage('next')">&gt;</button>
+            </div>
+        </div>
+        
+        <div class="page hidden" id="page4">
+            <h2>:3</h2>
+            <blockquote>
+                <p>"IN THE VASTNESS OF SPACE , MY HEART FINDS ITS HOME IN YOU, MY LOVE."</p>
+            </blockquote>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="turnPage('next')">&gt;</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page5">
+            <h2>LAST ONE BABY HIHI</h2>
+            <blockquote>
+                <p>"In the infinite expanse of space, I FOUND THE UNIVERSE IN YOUR EYES
+                    you: 🤩"</p>
+            </blockquote>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="turnPage('next')">&gt;</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page6">
+            <h2>MY QUICK LETTER</h2>
+            <blockquote>
+                <p>HELLO MY GALAXY HIHI SO CUTE, SOOOO MY LOVE HAPPY 1ST ANNIVERSARYYYYYYYYYYY GUSTO KONG PASALAMATAN KA SA LAHAT NG SACRIFICES SA LAHAT LAHAT NG GINAWA MO FOR ME IM SO THANKFUL MY BABY, KAYA MAHAL ACCEPT THIS AS MY GIFT AND THANKYOU GIFT HIHI. GRABE MAHAL SOBRANG TAGAL NA NATIN HINDI KO EXPECT NA TATAGAL TAYO NG GANITO HAYS GRABE WE'VE BEEN THROUGH ALOT :NEXT NA HIHI >>>>>
+                </p>
+            </blockquote>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="turnPage('next')">&gt;</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page7">
+            <h2>HIHI</h2>
+            <blockquote>
+                <p>AND YET WE PROVE SA ISAT ISA NA KAYA NATIN IM SO SPEECHLESS NGAYON MAHAL I DONT KNOW WHAT TO SAY IM JUST SO THANKFUL NA I HAVE YOU AND WE DID GO THROUGH EVERYTHING TOGETHER THANK YOU SO MUCH FOR STAYING KAHIT NA SOBRANG REDFLAG KO... IM SO THANKFULL LOVE PLEASE STAY. ANYWAYSSSSS YUNG MEANING NG SONG IS ILL LOVE YOU IN MY 100 LIVES AND COOSE YOU EVERYSINGLE TIME ILOVEYOUSOMUCH</p>
+            </blockquote>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="turnPage('next')">&gt;</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page8">
+            <h2>THANK YOU FOR READING MY QUICK LETTER BABYYYYY</h2>
+            <p>THATS ALL BABYYYY HIHI ILOVEYOUSOMUCHHHHH MOREEEEESSSTTTTT FOR ETERNITY AND BEYOND TILL DEATH FOREVER AND EVER MWMAWMMWAMAWMAWMAWMAWMAWMMAWMAWMAWMMAWMWAMWAAWMMWA🥰🥰🥰🥰🥰😘😘😘😘😘</p>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="resetBook()">Start Over</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page9">
+            <h2>Your Personal Message</h2>
+            <p>Write your own personal message about love below:</p>
+            <textarea id="userMessage" rows="6" cols="40" placeholder="Type your message here..."></textarea>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="turnPage('next')">&gt;</button>
+            </div>
+        </div>
+        
+
+        <div class="page hidden" id="page10">
+            <h2>Final Thoughts</h2>
+            <p>Always remember: love is a choice you make every day. Choose wisely and love deeply.</p>
+            <div class="buttons">
+                <button class="arrow" onclick="turnPage('prev')">&lt;</button>
+                <button class="arrow" onclick="resetBook()">Start Over</button>
+            </div>
+        </div>
+    </div>
+
+    <body>
+        <audio id="backgroundMusic" loop>
+            <source src="100 Lives (1).mp4" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="book">
+            <!-- Your existing book content here -->
+        </div>
+        
+        <script src="scripts.js"></script>
+        <script>           
+        // Play the audio when the page loads
+            document.addEventListener("DOMContentLoaded", function() {
+                const music = document.getElementById('backgroundMusic');
+                music.play().catch(error => {
+                    console.log("Audio playback was prevented:", error);
+                });
+            });
+        </script>
+    </body>
+</body>
+</html>
